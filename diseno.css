@@ -3,26 +3,22 @@ padding:0;
 margin:0;
 }
 
+
 body{
     background-color: #36393F;
     display: flex;
     justify-content: center;
 }
 
-.contenedor{
+.medio{
     width: 75%;
     background-color: #cacaca;
     padding: 0px;
 }
 
-.header-redes{
+.header-rs{
     display: flex;
     justify-content: center;    
-}
-
-.header-redes>img{
-    width: 35px;
-    height: 35px;
 }
 
 
@@ -31,11 +27,11 @@ body{
         display: flex;
         flex-direction: row-reverse;
     }
-    .header-redes{
+    .header-rs{
         justify-content: flex-end;
     }
-    .contenedor{
-        padding: 50px;
+    .medio{
+        padding: 55px;
     }
 }
 .categoria{
@@ -60,7 +56,6 @@ body{
     font-size: 1.2em;
     font-weight: bolder;
 }
-
 .button{
     padding: 7px;
     background-color: #8a8a8a;
@@ -68,3 +63,42 @@ body{
     box-shadow: 2px 2px 5px rgb(49, 49, 49);
 }
 
+.cuerpo{
+    display: flex;
+    justify-content: center;
+    font-size: 2.7em;
+}
+
+.containerOwnApp {
+    box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+    padding-top: 15px;
+ }
+  
+ .login-page {
+   padding: 8% 0 0;
+   margin: 0 auto 100px;
+   max-width: 360px;
+   position: relative;
+ }
+  
+ .login-form {
+    box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+ }
+  
+ .login-form-header {
+    padding-top: 16px;
+ }
+  
+ .login-from-row {
+    padding-top: 18px;
+    padding-bottom: 18px;
+ }
+  
+ .login-form-font-header {
+    font-size:30px; 
+    font-weight: bold;
+ }
+  
+ .login-form-font-header span {
+    color: #007C9B;
+ }
