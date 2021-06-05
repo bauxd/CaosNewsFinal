@@ -1,0 +1,3 @@
+Intentamos agregar una API sobre covid, pero al probarlos no servían porque o si no la API había sido eliminada o había que pagar para conseguir por una pro, la api de tiempo
+sirve en CHROME, en cualquiera de los dos EDGE no sirve, pero en cualquier otro navegador si, arreglamos todos los detalles faltantes de la evaluación anterior y agregamos
+la validación de datos en los formularios correspondientes
