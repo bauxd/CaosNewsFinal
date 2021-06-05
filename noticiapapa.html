@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China confirma primer contagio humano de nueva cepa de gripe aviar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="diseno.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script scr="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>        <!--CONTENEDOR -->
+        <div class="medio">
+        <header>
+            <div class="row header">
+                <div class="col-12 col-md-6 header-rs">
+                    <a href="https://www.facebook.com/" title="Visítanos en Facebook">
+                    <img src="img/icons8_facebook_48px.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/" title="Visítanos en Instagram">
+                    <img src="img/icons8_instagram_48px.png" alt="">
+                    </a>
+                    <a href="https://twitter.com/home" title="Visítanos en Twitter">
+                    <img src="img/icons8_twitter_48px.png" alt="">
+                    </a>
+                    <a href="" title="Entra a nuestro chat en Telegram">
+                    <img src="img/icons8_telegram_app_48px.png" alt="">
+                    </a>
+                </div>
+              </div>
+        </header>
+
+
+        <body>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script scr="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+            <!--HEADER LOGOS-->
+              
+            <a href="index.html" title="Caos News">
+                <img src="img/logocaosnews.png" alt="">
+                </a>
+
+
+            <style>
+          
+              .contenedorapi {
+                width: 10%;
+              }
+              
+              .rowapi {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              
+              #pais {
+                font-size: 1em;
+                font-weight: bold;
+              }
+              
+              #imagen>img {
+                width: 35px;
+              }
+              
+              #temp {
+                font-size: 1.2em;
+              }
+              
+              #clima {
+                display: flex;
+                justify-content: center;
+                color: darkgray;
+                font-size: 1.2em;
+              }
+              
+                      </style>
+              
+              
+                      <div class="contenedorapi">
+                        <div class="rowapi">
+                            <div class="col" id="pais"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col" id="imagen"></div>
+                            <div class="col" id="temp"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col" id="clima"></div>
+                        </div>
+                    </div>
+                    <div id="demo"></div>
+                    <script>
+                        d = document.getElementById("demo");
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(function (position) {
+                                latitud = position.coords.latitude;
+                                longitud = position.coords.longitude;
+                                $.get("http://api.openweathermap.org/data/2.5/weather?lat=" + latitud + "&lon=" + longitud + "&appid=2581f6487081d8ee37c38e25428ce588&units=metric&lang=es", function (data) {
+                                    $("#pais").append(data.name + ", " + data.sys.country);
+                                    $("#imagen").append("<img src='http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png'>");
+                                    $("#temp").append(data.main.temp + "°C");
+                                });
+                            });
+                        }
+                    </script>
+    
+
+
+
+    <!--INICIO MENÚ-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.html">Iniciar sesión</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="signup.html">Crear cuenta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Suscribirse</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="formulariocontacto.html">Contáctanos</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Palabra clave" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+      </nav>
+     <!--FIN MENÚ-->
+
+     <br><br><h1 class="cuerpo">China confirma primer contagio humano de nueva cepa de gripe aviar</h1>
+    
+     <i>01 de junio de 2021</i> <i>// China</i>
+     <br>Mundo
+     <center><img src="img/gripeaviar.jpg" alt="">
+     <br><br><p>China informó el martes del primer contagio humano en el mundo de la cepa H10N3 de gripe aviar, pero dijo que el riesgo de gran propagación entre personas era bajo.</p>
+ 
+     <br>China informó el martes del primer contagio humano en el mundo de la cepa H10N3 de gripe aviar, pero dijo que el riesgo de gran propagación entre personas era bajo. 
+     Un hombre de 41 años ingresó en el hospital con fiebre en la ciudad de Zhenjiang, en el este, el 28 de abril, y fue diagnosticado con H10N3 un mes después, precisó la Comisión Nacional de Salud china (NHC) en un comunicado. ”El riesgo de una propagación a gran escala es extremadamente bajo”, señaló el organismo.
+     El hombre afectado se encuentra estable y sus contactos estrechos no registraron “anormalidades”, añadió. El organismo calificó el H10N3 de ser un patógeno de las aves, con pocas probabilidades de causar la muerte o enfermedades graves.    
+ 
+     </center>
+
+    <div class="row categoria">
+        <div class="col-12 col-sm-6 col-lg-3 tarjeta">
+          <p class="titulo">Juan Ramos</p>
+          <img src="img/ramos.png" alt="">
+          <p>Periodista desde hace 7 años, deportista motivado, todo en este mundo se puede.</p>
+          <p>Ha ingresado X noticias.</p>
+        </div>       
+    </div>
+</body>
+</html>
